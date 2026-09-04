@@ -17,7 +17,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "8090:8080"
+      - "18090:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./letsencrypt:/certificates
@@ -48,3 +48,4 @@ services:
 networks:
   traefik-public:
     name: traefik-public
+    external: true
