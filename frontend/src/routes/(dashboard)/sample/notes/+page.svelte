@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Trash2Icon from '@lucide/svelte/icons/trash-2';
 	import { goto } from '$app/navigation';
-	import { authStore } from '$lib/modules/global/stores/auth';
-	import { ApiError } from '$lib/modules/global/utils/api-error';
+	import { authStore } from '$lib/modules/base/stores/auth';
+	import { ApiError } from '$lib/modules/base/utils/api-error';
 	import {
 		createNote,
 		deleteNote,
@@ -10,12 +10,12 @@
 		updateNote,
 		type Note
 	} from '$lib/modules/apps/sample/api';
-	import { Button } from '$lib/components/ui/button/index.js';
-	import * as Card from '$lib/components/ui/card/index.js';
-	import { Input } from '$lib/components/ui/input/index.js';
-	import { Label } from '$lib/components/ui/label/index.js';
-	import * as Sheet from '$lib/components/ui/sheet/index.js';
-	import * as Table from '$lib/components/ui/table/index.js';
+	import { Button } from '$lib/modules/base/ui/button/index.js';
+	import * as Card from '$lib/modules/base/ui/card/index.js';
+	import { Input } from '$lib/modules/base/ui/input/index.js';
+	import { Label } from '$lib/modules/base/ui/label/index.js';
+	import * as Sheet from '$lib/modules/base/ui/sheet/index.js';
+	import * as Table from '$lib/modules/base/ui/table/index.js';
 
 	let notes = $state<Note[]>([]);
 	let title = $state('');

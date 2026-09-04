@@ -1,19 +1,19 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { authStore } from '$lib/modules/global/stores/auth';
-	import { ApiError } from '$lib/modules/global/utils/api-error';
+	import { authStore } from '$lib/modules/base/stores/auth';
+	import { ApiError } from '$lib/modules/base/utils/api-error';
 	import {
 		createUser,
 		deleteUser,
 		listUsers,
 		updateUser,
 		type ManagedUser
-	} from '$lib/modules/base/users-api';
-	import { Button } from '$lib/components/ui/button/index.js';
-	import * as Card from '$lib/components/ui/card/index.js';
-	import { Input } from '$lib/components/ui/input/index.js';
-	import { Label } from '$lib/components/ui/label/index.js';
-	import { Switch } from '$lib/components/ui/switch/index.js';
+	} from '$lib/modules/base/users/api';
+	import { Button } from '$lib/modules/base/ui/button/index.js';
+	import * as Card from '$lib/modules/base/ui/card/index.js';
+	import { Input } from '$lib/modules/base/ui/input/index.js';
+	import { Label } from '$lib/modules/base/ui/label/index.js';
+	import { Switch } from '$lib/modules/base/ui/switch/index.js';
 	import { cn } from '$lib/utils';
 
 	let users = $state<ManagedUser[]>([]);

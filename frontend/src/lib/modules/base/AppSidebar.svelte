@@ -4,9 +4,9 @@
 	import BriefcaseIcon from '@lucide/svelte/icons/briefcase';
 	import HomeIcon from '@lucide/svelte/icons/home';
 	import UsersIcon from '@lucide/svelte/icons/users';
-	import { authStore } from '$lib/modules/global/stores/auth';
-	import { APP_NAME } from '$lib/modules/global';
-	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
+	import { authStore } from '$lib/modules/base/stores/auth';
+	import { APP_NAME } from '$lib/modules/base';
+	import * as Sidebar from '$lib/modules/base/ui/sidebar/index.js';
 
 	const baseItems: { title: string; href: string; icon: Component }[] = [
 		{ title: 'Dashboard', href: '/', icon: HomeIcon },

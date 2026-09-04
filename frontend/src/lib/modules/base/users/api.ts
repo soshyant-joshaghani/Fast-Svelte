@@ -1,7 +1,7 @@
 import { apiBaseUrl } from '$lib/config/backend';
-import { ApiError } from '$lib/modules/global/utils/api-error';
-import { formatApiError } from '$lib/modules/global/utils/auth-api';
-import { authFetch } from '$lib/modules/global/utils/auth-fetch';
+import { ApiError } from '$lib/modules/base/utils/api-error';
+import { formatApiError } from '$lib/modules/base/utils/auth-api';
+import { authFetch } from '$lib/modules/base/utils/auth-fetch';
 
 export type ManagedUser = {
 	id: string;

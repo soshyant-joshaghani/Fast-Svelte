@@ -41,10 +41,10 @@ FoxG foundation kits (**Fast-Next**, **Fast-Svelte**, **Fast-Rio**) share the sa
 
 | Kit | Shell location |
 |-----|----------------|
-| Fast-Next | `frontend/src/components/layout/`, `frontend/src/app/(dashboard)/` |
-| Fast-Svelte | `frontend/src/lib/components/layout/`, `frontend/src/routes/(dashboard)/` |
-| Fast-Rio | `frontend/src/components/sidebar.py`, `frontend/src/components/root_component.py` |
+| Fast-Next | `frontend/src/lib/modules/base/`, `frontend/src/app/(dashboard)/` |
+| Fast-Svelte | `frontend/src/lib/modules/base/`, `frontend/src/routes/(dashboard)/` |
+| Fast-Rio | `frontend/src/modules/base/`, Rio pages |
 
-Fast-Svelte UI primitives are **shadcn-svelte** under `frontend/src/lib/components/ui/` (`$lib/components/ui/`). Use those for buttons, cards, tables, sheets, sidebar, and form controls. Keep the dashboard shell in `layout/`.
+Fast-Svelte UI primitives are **shadcn-svelte** under `frontend/src/lib/modules/base/ui/` (`$lib/modules/base/ui/`). Use those for buttons, cards, tables, sheets, sidebar, and form controls. Keep the dashboard shell in `modules/base/`.
 
 Do not copy UI code between kits. Match behavior and visuals only. Shared-layer (non-UI) changes transfer to all four kits — see [fast-template/README.md](../../README.md).

@@ -46,11 +46,11 @@ Sibling kits (Fast-Next, Fast-Svelte, Fast-Nuxt, Fast-Rio) stay in sync on share
 | App feature (backend) | `backend/app/modules/apps/<name>/` |
 | App feature (frontend client) | `frontend/src/lib/modules/apps/<name>/` |
 | SvelteKit routes | `frontend/src/routes/` (`login/`, `(dashboard)/`) |
-| Shared dashboard shell | `frontend/src/lib/components/layout/` |
-| UI primitives (shadcn-svelte) | `frontend/src/lib/components/ui/` |
+| Shared dashboard shell | `frontend/src/lib/modules/base/` |
+| UI primitives (shadcn-svelte) | `frontend/src/lib/modules/base/ui/` |
 | Platform auth/users | `backend/app/modules/base/` |
 | System/health | `backend/app/modules/system/` |
-| Shared frontend shell | `frontend/src/lib/modules/global/` |
+| Shared frontend shell | `frontend/src/lib/modules/base/` |
 | Shared config | `backend/app/core/config.py`, `.env` |
 | Migrations | `backend/app/alembics/core/versions/` |
 | Backend tests | `tests/backend/` (mirror module paths) |
@@ -106,9 +106,9 @@ Do **not** introduce a separate application-exception hierarchy or custom error 
 - SvelteKit is first-class — implement UI in the feature module and route files, not scattered globals.
 - Use `frontend/src/lib/modules/apps/<name>/api.ts` for HTTP clients.
 - Use `frontend/src/routes/(dashboard)/` for authenticated pages; `login/` for auth.
-- Reuse shell from `frontend/src/lib/components/layout/`.
-- **Styling:** Tailwind + shadcn-svelte only. No `<style>` blocks or per-component CSS — utility classes and `$lib/components/ui/` primitives. Theme tokens live only in `frontend/src/app.css`.
-- Use shadcn-svelte primitives from `$lib/components/ui/` — do not invent parallel button/card/table styles.
+- Reuse shell from `frontend/src/lib/modules/base/`.
+- **Styling:** Tailwind + shadcn-svelte only. No `<style>` blocks or per-component CSS — utility classes and `$lib/modules/base/ui/` primitives. Theme tokens live only in `frontend/src/app.css`.
+- Use shadcn-svelte primitives from `$lib/modules/base/ui/` — do not invent parallel button/card/table styles.
 - Import API base URL from `$lib/config/backend` — do not hard-code URLs.
 - SvelteKit gives access to the full JS/TS ecosystem (Three.js, Babylon.js, npm packages) — use npm for frontend dependencies.
 

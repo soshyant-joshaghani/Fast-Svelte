@@ -16,7 +16,7 @@ Before creating a new pattern, inspect the **canonical `sample` module** (notes 
 
 Platform code (not your product): `modules/base/` (auth), `modules/system/` (health).
 
-Shared frontend shell: `frontend/src/lib/modules/global/`.
+Shared frontend shell: `frontend/src/lib/modules/base/` (design primitives at `base/ui/`). There is no project `components/` folder — modules are the component home.
 
 ## Backend layers
 
@@ -68,7 +68,7 @@ UI: http://dashboard.localhost/sample/notes
 TypeScript clients live in `frontend/src/lib/modules/apps/<name>/api.ts`:
 
 - Import `API_BASE_URL` from `$lib/config/backend`
-- Use `fetch` with auth headers from `$lib/modules/global/stores/auth`
+- Use `fetch` with auth headers from `$lib/modules/base/stores/auth`
 - Export typed functions (`listNotes`, `createNote`, etc.) — see sample module
 
 Keep routes thin: `+page.svelte` imports from the module's `api.ts` and handles UI state.

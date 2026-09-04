@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { authStore } from '$lib/modules/global/stores/auth';
+	import { authStore } from '$lib/modules/base/stores/auth';
 	import {
 		fetchCurrentUser,
 		loginWithPassword,
 		signupWithPrivateRoute
-	} from '$lib/modules/global/utils/auth-api';
+	} from '$lib/modules/base/utils/auth-api';
 
 	interface Props {
 		redirectTo?: string;

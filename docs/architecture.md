@@ -163,8 +163,8 @@ Open `http://dashboard.localhost/sample/notes` after starting dev to see the UI.
 SvelteKit routes live under `frontend/src/routes/`. The global shell provides:
 
 - `+layout.svelte` — root layout and navigation
-- `lib/modules/global/Authentication.svelte` — login UI
-- `lib/modules/global/stores/auth.ts` — session persistence
+- `lib/modules/base/Authentication.svelte` — login UI
+- `lib/modules/base/stores/auth.ts` — session persistence
 
 Feature pages call the FastAPI backend via `fetch` using `API_BASE_URL` from `frontend/src/lib/config/backend.ts`.
 
@@ -182,7 +182,7 @@ SvelteKit gives access to the full JS/TS ecosystem — install npm packages (Thr
 - OAuth2 password flow: `POST /api/v1/base/login/access-token`
 - Current user: `GET /api/v1/base/login/me`
 - Backend deps: `CurrentUser`, `SuperAdminUser` in `backend/app/api/deps.py`
-- Frontend stores token via `authStore` in `lib/modules/global/stores/auth.ts`
+- Frontend stores token via `authStore` in `lib/modules/base/stores/auth.ts`
 
 App modules should use `CurrentUser` when endpoints require authentication.
 

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { authStore } from '$lib/modules/global/stores/auth';
-	import Authentication from '$lib/modules/global/Authentication.svelte';
-	import { APP_NAME } from '$lib/modules/global';
+	import { authStore } from '$lib/modules/base/stores/auth';
+	import Authentication from '$lib/modules/base/Authentication.svelte';
+	import { APP_NAME } from '$lib/modules/base';
 
 	onMount(() => {
 		if ($authStore.isAuthenticated) goto('/');

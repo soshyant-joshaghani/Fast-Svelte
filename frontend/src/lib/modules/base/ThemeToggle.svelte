@@ -1,8 +1,8 @@
 <script lang="ts">
 	import MoonIcon from '@lucide/svelte/icons/moon';
 	import SunIcon from '@lucide/svelte/icons/sun';
-	import { Button } from '$lib/components/ui/button/index.js';
-	import { themeStore } from '$lib/modules/global/stores/theme';
+	import { Button } from '$lib/modules/base/ui/button/index.js';
+	import { themeStore } from '$lib/modules/base/stores/theme';
 </script>
 
 <Button

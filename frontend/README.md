@@ -7,12 +7,22 @@ SvelteKit dashboard (Svelte 5, TypeScript, Tailwind 4, shadcn-svelte, adapter-no
 ```
 src/
 ├── lib/config/backend.ts           # API_BASE_URL (/api/v1)
-├── lib/components/ui/              # shadcn-svelte primitives
-├── lib/components/layout/          # dashboard shell
-├── lib/modules/global/             # shared shell (auth, stores)
+├── lib/modules/base/               # kit/platform (auth, shell, stores)
+│   └── ui/                         # shadcn-svelte primitives
 ├── lib/modules/apps/<name>/api.ts  # per-app HTTP clients
 └── routes/                         # SvelteKit pages (+page.svelte)
 ```
+
+### Frontend modules (mandatory)
+
+Under the frontend modules root there are **only**:
+
+- `base/` — kit/platform (auth, users, shell, i18n, stores) + design primitives at `base/ui/`
+- `apps/<domain>/` — product domains (API clients + UI), mirroring `backend/app/modules/apps/<domain>/`
+
+There is **no** project `components/` folder as the app UI home. Modules are the component home.
+Do not add `global/`, `shell/`, `layout/`, or a top-level `modules/ui/` peer of `base`/`apps`.
+Where shadcn (or equivalent) is used: `ui` → `…/modules/base/ui`, `components` alias → `…/modules/base`.
 
 ## Canonical example
 

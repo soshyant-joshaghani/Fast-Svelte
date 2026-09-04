@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { authStore } from '$lib/modules/global/stores/auth';
-	import AppSidebar from '$lib/components/layout/AppSidebar.svelte';
-	import Header from '$lib/components/layout/Header.svelte';
-	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
+	import { authStore } from '$lib/modules/base/stores/auth';
+	import AppSidebar from '$lib/modules/base/AppSidebar.svelte';
+	import Header from '$lib/modules/base/Header.svelte';
+	import * as Sidebar from '$lib/modules/base/ui/sidebar/index.js';
 
 	let { children } = $props();
 

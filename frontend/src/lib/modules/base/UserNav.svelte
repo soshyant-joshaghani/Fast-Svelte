@@ -1,9 +1,9 @@
 <script lang="ts">
 	import LogOutIcon from '@lucide/svelte/icons/log-out';
 	import { goto } from '$app/navigation';
-	import * as Avatar from '$lib/components/ui/avatar/index.js';
-	import { Button } from '$lib/components/ui/button/index.js';
-	import { authStore } from '$lib/modules/global/stores/auth';
+	import * as Avatar from '$lib/modules/base/ui/avatar/index.js';
+	import { Button } from '$lib/modules/base/ui/button/index.js';
+	import { authStore } from '$lib/modules/base/stores/auth';
 
 	function handleLogout() {
 		authStore.logout();

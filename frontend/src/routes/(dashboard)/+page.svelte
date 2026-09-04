@@ -2,11 +2,11 @@
 	import { onMount } from 'svelte';
 	import { toSameOriginApiUrl } from '$lib/config/api-url';
 	import { apiBaseUrl } from '$lib/config/backend';
-	import { authStore } from '$lib/modules/global/stores/auth';
-	import { fetchCurrentUser } from '$lib/modules/global/utils/auth-api';
-	import { Badge } from '$lib/components/ui/badge/index.js';
-	import { Button } from '$lib/components/ui/button/index.js';
-	import * as Card from '$lib/components/ui/card/index.js';
+	import { authStore } from '$lib/modules/base/stores/auth';
+	import { fetchCurrentUser } from '$lib/modules/base/utils/auth-api';
+	import { Badge } from '$lib/modules/base/ui/badge/index.js';
+	import { Button } from '$lib/modules/base/ui/button/index.js';
+	import * as Card from '$lib/modules/base/ui/card/index.js';
 
 	let health = $state<boolean | null>(null);
 	let sample = $state<string>('…');

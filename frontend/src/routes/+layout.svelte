@@ -1,10 +1,10 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { authStore } from '$lib/modules/global/stores/auth';
-	import { themeStore } from '$lib/modules/global/stores/theme';
-	import PwaRegister from '$lib/modules/global/PwaRegister.svelte';
-	import { APP_NAME } from '$lib/modules/global';
+	import { authStore } from '$lib/modules/base/stores/auth';
+	import { themeStore } from '$lib/modules/base/stores/theme';
+	import PwaRegister from '$lib/modules/base/PwaRegister.svelte';
+	import { APP_NAME } from '$lib/modules/base';
 
 	let { children } = $props();
 

@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
-import { fetchCurrentUser } from '$lib/modules/global/utils/auth-api';
+import { fetchCurrentUser } from '$lib/modules/base/utils/auth-api';
 
 export type AuthUser = {
 	id?: string;
