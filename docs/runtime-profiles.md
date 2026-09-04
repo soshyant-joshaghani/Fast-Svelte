@@ -47,6 +47,8 @@ There is no slim production profile.
 
 Job enqueue endpoints return `503` when Redis is unavailable (expected in Slim unless Redis is started manually).
 
+Public / shared list-detail reads use `app.core.cache` when Redis is reachable (full / production). Slim (no Redis) falls through to Postgres only — soft degrade, no env flag.
+
 ## Dev ports reference
 
 | Service | Host port |
