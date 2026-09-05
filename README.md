@@ -134,7 +134,7 @@ __ctrl__\fast-svelte-ctrl.bat dev run all
 | API (Scalar) | http://api.localhost/sdoc |
 | Adminer | http://adminer.localhost |
 | Traefik | http://localhost:8090 |
-| Direct Vite | http://localhost:3100 |
+| Direct Vite | http://localhost:5000 |
 | Direct API | http://localhost:8000/docs |
 
 Linux/mac:
@@ -147,7 +147,7 @@ __ctrl__/fast-svelte-ctrl.sh dev run all
 
 Stop: `__ctrl__\fast-svelte-ctrl.bat dev stop all`
 
-**Port 80/443 conflict:** only one Traefik-on-`:80` stack at a time. Stop the other proxy or run apps only: `dev run apps` (direct `http://localhost:3000` / `http://localhost:8000/docs`).
+**Port 80/443 conflict:** only one Traefik-on-`:80` stack at a time. Stop the other proxy or run apps only: `dev run apps` (direct `http://localhost:5000` / `http://localhost:8000/docs`).
 
 ---
 

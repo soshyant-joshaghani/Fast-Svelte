@@ -31,7 +31,7 @@ Choose Full or Slim: [runtime-profiles.md](runtime-profiles.md)
 ## Hot reload
 
 - **API:** uvicorn `--reload` on port 8000 (host)
-- **UI:** Vite HMR via `npm run dev` on port 3000 (host)
+- **UI:** Vite HMR via `npm run dev` on port 5000 (host)
 - **Infra:** Docker Compose (`compose.dev.yml`)
 
 Edit Python and TypeScript files; services restart automatically.

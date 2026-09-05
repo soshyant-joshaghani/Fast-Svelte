@@ -43,7 +43,7 @@ Or via CLI: `__ctrl__\fast-svelte-ctrl.bat dev run all`
 
 Vite proxies `/api` → `API_PROXY_TARGET` (default `http://localhost:8000`).
 
-In Docker dev, Traefik serves http://dashboard.localhost → Vite :3000.
+In Docker dev, Traefik serves http://dashboard.localhost → Vite :5000.
 
 ## Production
 

@@ -26,7 +26,7 @@ APP_STARTUP_TIMEOUT_S = 180.0
 FULL_INFRA_SERVICES = ("db", "redis", "proxy", "adminer")
 SLIM_INFRA_SERVICES = ("db", "proxy", "adminer")
 
-FRONTEND_DEV_PORT = 3100
+FRONTEND_DEV_PORT = 5000
 
 # (window_title, port) — host processes; port None = no listener (e.g. ARQ worker)
 APP_PORTS = (

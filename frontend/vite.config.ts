@@ -61,7 +61,7 @@ export default defineConfig({
 		})
 	],
 	server: {
-		port: 3100,
+		port: 5000,
 		strictPort: true,
 		host: true,
 		allowedHosts: ['dashboard.localhost', 'localhost'],

@@ -12,7 +12,7 @@ __ctrl__\fast-svelte-ctrl.bat dev run all
 
 **Infrastructure (Docker):** Postgres, Redis, Traefik, Adminer
 
-**Apps (host):** uvicorn (API :8000), ARQ worker, Vite (dashboard :3000)
+**Apps (host):** uvicorn (API :8000), ARQ worker, Vite (dashboard :5000)
 
 Use when the application needs background jobs, or when you want the complete Fast-Svelte stack locally.
 
@@ -54,9 +54,9 @@ Public / shared list-detail reads use `app.core.cache` when Redis is reachable (
 | Service | Host port |
 |---------|-----------|
 | API (uvicorn) | 8000 |
-| Vite (frontend) | 3000 |
+| Vite (frontend) | 5000 |
 | Postgres | 15432 |
 | Redis | 16379 |
 | Traefik dashboard | 8090 |
 
-Traefik routes `api.localhost` → :8000 and `dashboard.localhost` → :3000.
+Traefik routes `api.localhost` → :8000 and `dashboard.localhost` → :5000.

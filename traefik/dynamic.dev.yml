@@ -23,7 +23,7 @@ http:
     fast-svelte-frontend-host:
       loadBalancer:
         servers:
-          - url: http://host.docker.internal:3100
+          - url: http://host.docker.internal:5000
 
 tls:
   stores:

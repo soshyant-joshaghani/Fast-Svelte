@@ -102,7 +102,7 @@ fast-svelte-ctrl.bat dev reset all
 
 | Action | Infra (compose.dev.yml) | Apps (host) |
 |--------|-------------------------|-------------|
-| `run` / `start` | `up -d` db, redis (full), proxy, adminer + migrate | uvicorn :8000, arq worker (full), Vite :3000 |
+| `run` / `start` | `up -d` db, redis (full), proxy, adminer + migrate | uvicorn :8000, arq worker (full), Vite :5000 |
 | `stop` | `compose stop` — containers kept | kill host processes |
 | `down` | `compose down` — volumes kept | kill host processes |
 | `purge` | `compose down -v` — wipe data, stay down | kill host processes |

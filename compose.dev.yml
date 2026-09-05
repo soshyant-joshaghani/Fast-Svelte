@@ -3,14 +3,14 @@
 # App processes run on the host with hot reload (fast-svelte-ctrl.bat dev run all):
 #   uvicorn --reload on :8000
 #   arq app.worker.worker.WorkerSettings  (full runtime — requires Redis)
-#   npm run dev on :3000
+#   npm run dev on :5000
 #
 # Slim runtime (no Redis / no worker):
 #   fast-svelte-ctrl.bat dev run all --slim
 #
 # Traefik routes (file provider → host.docker.internal):
 #   http://api.localhost        → localhost:8000
-#   http://dashboard.localhost  → localhost:3000
+#   http://dashboard.localhost  → localhost:5000
 #   http://adminer.localhost    → adminer container
 # Adminer login: server `db`, port 5432, credentials from .env (not localhost:15432). See Readme.md.
 # Traefik dashboard: http://localhost:8090
@@ -30,7 +30,7 @@ x-dev-app-config: &dev-app-config
   ENVIRONMENT: local
   PROJECT_NAME: fast-svelte
   FRONTEND_HOST: http://dashboard.localhost
-  BACKEND_CORS_ORIGINS: http://localhost,http://localhost:3100,http://localhost:8000,http://api.localhost,http://dashboard.localhost,http://adminer.localhost
+  BACKEND_CORS_ORIGINS: http://localhost,http://localhost:5000,http://localhost:8000,http://api.localhost,http://dashboard.localhost,http://adminer.localhost
   REDIS_HOST: host.docker.internal
   REDIS_PORT: "16379"
   REDIS_DB: ${REDIS_DB:-0}
