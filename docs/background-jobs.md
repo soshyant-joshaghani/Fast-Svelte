@@ -37,7 +37,7 @@ Worker console title: `fast-svelte-worker` (Windows).
 
 **Slim runtime** does not start Redis or the worker. See [runtime-profiles.md](runtime-profiles.md).
 
-Dev Redis: `localhost:16379`
+Dev Redis: `localhost:6379`
 
 ## Production
 

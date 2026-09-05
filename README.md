@@ -92,9 +92,9 @@ Details: [docs/architecture.md](docs/architecture.md) · [docs/modules.md](docs/
 |-------|------|---------|
 | Frontend | Svelte 5 + SvelteKit + shadcn-svelte + TypeScript + Tailwind | http://dashboard.localhost |
 | Backend | FastAPI + SQLModel + Alembic | http://api.localhost/docs · http://api.localhost/sdoc |
-| Database | Postgres 18 | localhost:15432 |
-| Jobs | ARQ + Redis 8 | localhost:16379 · worker on host (full runtime) |
-| Proxy | Traefik 3.6 | http://localhost:8090 |
+| Database | Postgres 18 | localhost:5432 |
+| Jobs | ARQ + Redis 8 | localhost:6379 · worker on host (full runtime) |
+| Proxy | Traefik 3.6 | http://localhost:8080 |
 | Adminer | Adminer (via Traefik) | http://adminer.localhost |
 
 ---
@@ -133,7 +133,7 @@ __ctrl__\fast-svelte-ctrl.bat dev run all
 | API (Swagger) | http://api.localhost/docs |
 | API (Scalar) | http://api.localhost/sdoc |
 | Adminer | http://adminer.localhost |
-| Traefik | http://localhost:8090 |
+| Traefik | http://localhost:8080 |
 | Direct Vite | http://localhost:5000 |
 | Direct API | http://localhost:8000/docs |
 
@@ -223,7 +223,7 @@ fast-svelte/
 __ctrl__\fast-svelte-ctrl.bat test all
 ```
 
-Backend needs dev DB (`dev run infra` → `localhost:15432`). See [docs/testing.md](docs/testing.md).
+Backend needs dev DB (`dev run infra` → `localhost:5432`). See [docs/testing.md](docs/testing.md).
 
 After Alembic or Postgres volume changes: `dev purge infra`, then `dev run infra`.
 
@@ -266,7 +266,7 @@ Workspace index: [fast-template/README.md](../README.md)
 | Context | Server | Port |
 |---------|--------|------|
 | Adminer (browser) | `db` | `5432` |
-| Host / IDE / pytest | `localhost` | `15432` |
+| Host / IDE / pytest | `localhost` | `5432` |
 
 Credentials from `.env` (`POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`).
 

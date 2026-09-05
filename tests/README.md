@@ -26,6 +26,6 @@ set PYTHONPATH=.;..\tests\backend
 pytest ..\tests\backend\ -v
 ```
 
-Backend tests need the dev stack running (`dev run infra` → `localhost:15432`).
+Backend tests need the dev stack running (`dev run infra` → `localhost:5432`).
 
 Full docs: [docs/testing.md](../docs/testing.md)

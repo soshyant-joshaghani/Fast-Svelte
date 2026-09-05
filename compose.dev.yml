@@ -12,9 +12,9 @@
 #   http://api.localhost        → localhost:8000
 #   http://dashboard.localhost  → localhost:5000
 #   http://adminer.localhost    → adminer container
-# Adminer login: server `db`, port 5432, credentials from .env (not localhost:15432). See Readme.md.
-# Traefik dashboard: http://localhost:8090
-# Host Redis: :16379
+# Adminer login: server `db`, port 5432, credentials from .env (not localhost:5432). See Readme.md.
+# Traefik dashboard: http://localhost:8080
+# Host Redis: :6379
 
 name: fast-svelte-dev
 
@@ -32,7 +32,7 @@ x-dev-app-config: &dev-app-config
   FRONTEND_HOST: http://dashboard.localhost
   BACKEND_CORS_ORIGINS: http://localhost,http://localhost:5000,http://localhost:8000,http://api.localhost,http://dashboard.localhost,http://adminer.localhost
   REDIS_HOST: host.docker.internal
-  REDIS_PORT: "16379"
+  REDIS_PORT: "6379"
   REDIS_DB: ${REDIS_DB:-0}
   REDIS_PASSWORD: ${REDIS_PASSWORD:-}
 
@@ -42,7 +42,7 @@ services:
     image: redis:8-alpine
     restart: "no"
     ports:
-      - "16379:6379"
+      - "6379:6379"
     command:
       - sh
       - -c
@@ -69,7 +69,7 @@ services:
     restart: "no"
     <<: *dev-env
     ports:
-      - "15432:5432"
+      - "5432:5432"
     volumes:
       # postgres:18 VOLUME is /var/lib/postgresql (not .../data); default PGDATA is .../18/docker.
       # Mount the named volume at /var/lib/postgresql or Docker creates an empty anonymous volume.
@@ -116,7 +116,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "8090:8080"
+      - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./traefik/dynamic.dev.yml:/etc/traefik/dynamic.dev.yml:ro

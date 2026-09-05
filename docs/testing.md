@@ -18,7 +18,7 @@ npm test
 
 - Framework: pytest + FastAPI `TestClient`
 - Location: `tests/backend/` mirrors `backend/app/modules/`
-- Database: real Postgres on `localhost:15432` (start infra first)
+- Database: real Postgres on `localhost:5432` (start infra first)
 
 ```bat
 cd backend

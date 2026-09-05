@@ -55,8 +55,8 @@ Public / shared list-detail reads use `app.core.cache` when Redis is reachable (
 |---------|-----------|
 | API (uvicorn) | 8000 |
 | Vite (frontend) | 5000 |
-| Postgres | 15432 |
-| Redis | 16379 |
-| Traefik dashboard | 8090 |
+| Postgres | 5432 |
+| Redis | 6379 |
+| Traefik dashboard | 8080 |
 
 Traefik routes `api.localhost` → :8000 and `dashboard.localhost` → :5000.

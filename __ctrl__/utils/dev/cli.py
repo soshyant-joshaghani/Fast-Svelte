@@ -38,7 +38,7 @@ APP_PORTS = (
 STACK_OPEN_URLS: dict[str, tuple[str, ...]] = {
     "infra": (
         "http://adminer.localhost/",
-        "http://localhost:8090/",
+        "http://localhost:8080/",
     ),
     "apps": (
         "http://dashboard.localhost/",
@@ -578,7 +578,7 @@ def _start_apps(*, slim: bool = False) -> int:
     print("  API docs:    http://api.localhost/docs")
     print("  Scalar:      http://api.localhost/sdoc")
     print("  Adminer:     http://adminer.localhost")
-    print("  Traefik:     http://localhost:8090")
+    print("  Traefik:     http://localhost:8080")
     print()
     print(f"Direct: http://localhost:{FRONTEND_DEV_PORT}  http://localhost:8000/docs  http://localhost:8000/sdoc")
     if not slim:

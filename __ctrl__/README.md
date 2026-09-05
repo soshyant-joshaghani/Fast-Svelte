@@ -126,7 +126,7 @@ fast-svelte-ctrl.bat test backend
 fast-svelte-ctrl.bat test frontend
 ```
 
-Backend needs the dev DB (`dev run infra` → `localhost:15432`).
+Backend needs the dev DB (`dev run infra` → `localhost:5432`).
 
 ## Local production smoke
 
