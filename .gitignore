@@ -1,0 +1,17 @@
+.vscode/*
+!.vscode/extensions.json
+node_modules/
+.venv/
+.env
+.env.local
+!.env.development
+!.env.production
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+frontend/.svelte-kit/
+frontend/build/
+.DS_Store
+letsencrypt/
